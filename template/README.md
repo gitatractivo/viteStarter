@@ -1,54 +1,76 @@
-# React + TypeScript + Vite
+# Ultimate Vite Starter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A complete React + Vite + TypeScript + Tailwind CSS starter template with shadcn/ui components pre-configured.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ⚡️ [React 19](https://react.dev/) with [Vite](https://vitejs.dev/)
+- 🎨 [Tailwind CSS](https://tailwindcss.com/) for styling
+- 📝 [TypeScript](https://www.typescriptlang.org/) for type safety
+- 🧩 [shadcn/ui](https://ui.shadcn.com/) components pre-configured
+- 📦 Organized folder structure
+- 🧪 Testing setup with Vitest
+- 📱 Fully responsive design
+- 🔍 ESLint configured
 
-## Expanding the ESLint configuration
+## Folder Structure
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```
+/src
+  /assets         # Static assets
+  /components     
+    /ui           # shadcn/ui components
+    /common       # Common components
+  /hooks          # Custom React hooks
+  /lib            # Utility libraries
+  /pages          # Page components
+  /styles         # Global styles
+  /test           # Test utilities
+  /utils          # Helper functions
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Quick Start
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Create a new project with this template using:
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+pnpm dlx ultimate-vite-starter my-app
 ```
+
+Then navigate to your project:
+
+```bash
+cd my-app
+pnpm dev
+```
+
+## Adding shadcn/ui Components
+
+The template comes with shadcn/ui pre-configured. Add new components with:
+
+```bash
+pnpm component add button
+```
+
+Or any other available component:
+
+```bash
+pnpm component add card
+pnpm component add dialog
+# etc.
+```
+
+## Available Scripts
+
+- `pnpm dev` - Start development server
+- `pnpm build` - Build for production
+- `pnpm preview` - Preview production build
+- `pnpm lint` - Run ESLint
+- `pnpm test` - Run tests
+- `pnpm test:ui` - Run tests with UI
+- `pnpm coverage` - Generate test coverage report
+- `pnpm component` - Add shadcn/ui components
+
+## License
+
+MIT
