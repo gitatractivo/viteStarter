@@ -1,10 +1,8 @@
-
-import { Button } from "./components/ui/button";
-import { ModeToggle } from "./components/mode-toggle";
+import { Button } from "@components/ui/button";
+import { ModeToggle } from "@components/mode-toggle";
 import { motion } from "framer-motion";
 import { useMediaQuery } from "@mantine/hooks";
 import { useState } from "react";
-
 
 function App() {
   const [count, setCount] = useState(0);
@@ -19,7 +17,6 @@ function App() {
           </h1>
           <div className="flex items-center gap-4">
             <ModeToggle />
-           
           </div>
         </div>
       </header>
@@ -38,15 +35,10 @@ function App() {
             With TypeScript, Tailwind CSS, shadcn/ui, Framer Motion, and more!
           </p>
           <div className="flex flex-wrap gap-4 justify-center mt-8">
-            <Button  onClick={() => setCount(count + 1)}>
-              Count: {count}
-            </Button>
-            <Button variant="outline" >
-              Get Started
-            </Button>
+            <Button onClick={() => setCount(count + 1)}>Count: {count}</Button>
+            <Button variant="outline">Get Started</Button>
           </div>
         </div>
-
 
         {isMobile && (
           <div className="mt-8 p-4 bg-warning-100 text-warning-900 dark:bg-warning-900/20 dark:text-warning-100 rounded-md">
