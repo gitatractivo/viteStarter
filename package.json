@@ -1,23 +1,33 @@
 {
   "name": "ultimate-vite-starter",
   "version": "1.0.0",
-  "description": "React Vite Tailwind TypeScript starter template",
+  "description": "Ultimate React + Vite + Tailwind + TypeScript starter template",
+  "bin": {
+    "ultimate-vite-starter": "./bin/index.js"
+  },
+  "files": [
+    "bin",
+    "template"
+  ],
   "keywords": [
     "react",
     "vite",
     "tailwind",
     "typescript",
-    "template"
-  ],
-  "author": "gitaractivo",
-  "license": "MIT",
-  "main": "template.json",
-  "files": [
     "template",
-    "template.json"
+    "starter",
+    "shadcn"
   ],
+  "author": "Your Name",
+  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/gitatractivo/viteStarter.git"
+    "url": "https://github.com/yourusername/ultimate-vite-starter.git"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "dependencies": {
+    "fs-extra": "^11.2.0"
   }
 }
