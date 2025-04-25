@@ -1,6 +1,6 @@
 {
   "name": "ultimate-vite-starter",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "Ultimate React + Vite + Tailwind + TypeScript starter template",
   "bin": {
     "ultimate-vite-starter": "./bin/index.js"
